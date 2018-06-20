@@ -1,19 +1,29 @@
 const path=require('path');
-
+const http=require('http');
 const express=require('express');
 
-var app=express();
 const publicPath=path.join(__dirname,'../public');
+const socketIO=require('socket.io');
+
+var app=express();
+var server=http.createServer(app);
+var io=socketIO(server);
 
 app.use(express.static(publicPath));
-app.set('view engine','html');
 
-app.get('/',(req,res)=>{
-  res.send('index.html')
+io.on('connection',(socket)=>{
+  console.log('New User Connected');
+
+  socket.on('disconnect',()=>{
+    console.log('Disconnected from server');
+  });
+
 });
+// io.on('connection',(socket)=>{
+//   console.log('New User Connected');
+// });
 
 
-
-app.listen(3000,()=>{
+server.listen(3000,()=>{
   console.log('Server is Upa and running on port 3000');
 });
