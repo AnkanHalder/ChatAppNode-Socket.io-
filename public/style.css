@@ -1,0 +1,172 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+h1{
+  text-align:center;
+  padding: 10px;
+  margin:5px;
+  color:white;
+}
+
+.chat-box{
+  background-color:gray;
+  width:550px;
+  height:525px;
+  margin:auto;
+  padding-top:8px;
+  background: rgba(102, 153, 204, .2);
+  border-radius:10px;
+}
+
+
+
+.sendbox{
+margin-left:25px;
+
+}
+.list-item{
+  width:500px;
+  height:400px;
+  margin:25px;
+  text-decoration: none;
+  background:rgba(211, 218, 218, .5);
+  border-radius:10px;
+}
+ol{
+  width:500px;
+  height:400px;
+  margin-left:5px;
+  overflow-y: auto;
+  list-style-type:none;
+}
+
+ol::-webkit-scrollbar{
+  width:10px;
+}
+ol::-webkit-scrollbar-thumb{
+  border-radius:5px;
+  background:rgba(0,0,0,.1);
+}
+.name{
+  width:50px;
+  height:40px;
+}
+
+.usersmessage{
+  width:400px;
+  height:40px;
+}
+#send{
+  width:45px;
+  height:40px;
+  color:white;
+  background: rgba(255, 102, 0, 1);
+}
+
+.friend{
+  color:#ffffff;
+  padding:15px;
+  background:#3399ff;
+  margin-left:10px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-right: 400px;
+  border-radius:30px;
+  float:left;
+}
+.user{
+
+  color:#ffffff;
+
+  padding:15px;
+  background:#cc99ff;
+  margin-left:400px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius:30px;
+  float:right;
+}
+
+@media screen and (max-width:750px){
+
+  h1{
+    text-align:center;
+    padding: 5px;
+    margin:5px;
+    font-size:25px ;
+  }
+
+  .chat-box{
+    background-color:gray;
+    width:300px;
+    height:500px;
+    margin:auto;
+    padding-top:4px;
+    background: rgba(102, 153, 204, .6);
+    border-radius:10px;
+  }
+
+  .list-item{
+    background-color:#d3dada;
+    width:250px;
+    height:400px;
+    margin:25px;
+    text-decoration: none;
+    background:rgba(211, 218, 218, .7);
+    border-radius:10px;
+
+  }
+
+  ol{
+    width:250px;
+    height:400px;
+    margin-left:2.55px;
+    overflow-y: auto;
+    list-style-type:none;
+  }
+
+  .usersmessage{
+    width:175px;
+    height:30px;
+  }
+  .name{
+    width:45px;
+    height:30px;
+  }
+
+  #send{
+    width:35px;
+    height:30px;
+    color:white;
+    background: rgba(255, 102, 0, 1);
+  }
+
+  .friend{
+    color:#ffffff;
+    padding:5px;
+    background:#3399ff;
+    margin-left:5px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right: 90px;
+    border-radius:30px;
+    float:left;
+  }
+  .user{
+    color:#ffffff;
+    padding:5px;
+    background:#cc99ff;
+    margin-left:90px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius:30px;
+    float:right;
+  }
+
+
+}

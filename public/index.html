@@ -3,24 +3,73 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  canvas{
+       position:absolute;
+       top:0;
+       left:0;
+       width:100vw;
+        height:100vh;
+        z-index:-1;
+        }
+
+  </style>
+
 </head>
 
 <body>
+  <canvas></canvas>
   <h1>Welcome to Chat App</h1>
 
-  <p>
-    <ol id="messages"></ol>
-  </p>
+<div class="chat-box">
+  <div class="list-item">
 
-  <form id="message-form">
-    <input name="message" type="text" placeholder="Enter Your Message"/>
-    <button id="send">Send</button>
-  </form>
+      <ol id="messages">
+                <!-- <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li>
+                <li class="user">Item_Level_2</li>
+                <li class="friend">Item_Level_2</li> -->
+      </ol>
+
+  </div>
+
+    <div class="sendbox">
+
+      <form id="message-form">
+        <input type="text" placeholder=" Name" class="name">
+        <input class="usersmessage" name="message" type="text" placeholder="  Enter Your Message"/>
+        <button id="send">Send</button>
+      </form>
+  </div>
+</div>
 
 
   <script src="/socket.io/socket.io.js" type="text/javascript"></script>
   <script src="/js/libs/jquery-3.3.1.min.js" type="text/javascript"></script>
   <script src="/js/index.js" type="text/javascript"></script>
+    <script src="canvas.js"></script>
 
 </body>
 
