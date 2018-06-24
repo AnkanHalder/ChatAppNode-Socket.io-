@@ -6,6 +6,7 @@ const {generateMessage}=require('./utils/message.js');
 const publicPath=path.join(__dirname,'../public');
 const socketIO=require('socket.io');
 
+var port=process.env.PORT || 3000;
 var app=express();
 var server=http.createServer(app);
 var io=socketIO(server);
@@ -32,6 +33,6 @@ io.on('connection',(socket)=>{
 
 
 
-server.listen(3000,()=>{
-  console.log('Server is Upa and running on port 3000');
+server.listen(port,()=>{
+  console.log('Server is Upa and running on port '+port);
 });
